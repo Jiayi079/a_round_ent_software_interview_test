@@ -35,19 +35,19 @@ const ProductList = () => {
   }, []);
 
   return (
-    <Container sx={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      paddingTop: 4,
-      paddingBottom: 4,
-    }}>
+    <Container sx={{ paddingTop: 4, paddingBottom: 4, textAlign: 'center' }}>
+      {/* Title */}
+      <Typography variant="h4" component="h1" sx={{ fontWeight: 'bold', marginBottom: 4 }}>
+        Simple Card List
+      </Typography>
+      
+      {/* Product List */}
       <Box sx={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
         gap: 3,
         maxWidth: 1200,
-        width: '100%',
+        margin: '0 auto'
       }}>
         {products.map(product => (
           <Card key={product.id} sx={{
@@ -58,7 +58,7 @@ const ProductList = () => {
               boxShadow: 6,
             }
           }}>
-            {/* Delete button positioned at the top left of the image */}
+            {/* Delete button at the top-left corner of the image */}
             <IconButton
               onClick={() => handleDelete(product.id)}
               aria-label="delete product"
