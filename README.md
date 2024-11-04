@@ -46,6 +46,11 @@ git clone <your-repository-url>
 cd simple-card-list-application
 ```
 
+naviage to the web-dev folder:
+```bash
+cd StarterCode
+```
+
 ### Step 2: Backend Setup
 
 1. Navigate to the backend directory:
@@ -69,7 +74,7 @@ app.use(cors());
 
 4. Start the backend server:
 ```bash
-npm start
+node index.js
 ```
 
 The backend server will run at `http://localhost:3000` by default.
